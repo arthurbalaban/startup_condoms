@@ -33,12 +33,6 @@ p{
     justify-content: space-between;
     align-items: center;
     box-shadow:5px 5px 5px#cccccc;
-    display: flex;
-}
-.right-section{
-    display: flex;
-    align-items: center;
-    gap: 40px; /* espace entre liens et bouton */
 }
 .logo{
     font-size: 18px;
