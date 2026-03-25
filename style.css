@@ -28,7 +28,7 @@ p{
     left: 0;
     width: 100%;
     background-color: white;
-    padding: 10px 40px;
+    padding: 1% 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +57,12 @@ p{
 .nav-links a:hover{
     opacity: 0.6;
 }
+
+#imgBanner{
+    width: 1000px;
+}
+
+
 
 .back-to-top{
     position: fixed;
