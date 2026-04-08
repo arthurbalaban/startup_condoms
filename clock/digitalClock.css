@@ -11,6 +11,9 @@
     margin-top: 10px;
     padding: 5px;
 }
+#clocks{
+    display: flex;
+}
 .segment0 { left: 2px; top: 0.5px; width: 6px; height: 0px; }
 .segment1 { left: 0px; top: 2px; width: 0px; height: 6px; }
 .segment2 { left: 9.5px; top: 2px; width: 0px; height: 6px; }
