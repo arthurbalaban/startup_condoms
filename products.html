@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="clock/digitalClock.css">
+    <script src="clock/digitalClock.js" defer></script>
 </head>
 <body>
-    
+    <header class="navbar">
+        <div class="headerlogo"><a href="home.html"><img src="images/square_template.png" style="width:50px"></a></div> 
+        <div class="headerlinks">
+            <nav class="navlinks">
+                <a href="products.html">Our products</a>
+                <a href="about.html">About us</a>
+                <a href="team.html">Our team</a>
+                <a href="find-us.html">Find us</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+        </div>
+        <div id="clocks">
+            <div id="clock" class="clock">
+                <div id="hours-tens"></div>
+                <div id="hours-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="minutes-tens"></div>
+                <div id="minutes-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="seconds-tens"></div>
+                <div id="seconds-units"></div>
+            </div>
+            <div id="timer" class="timer">
+                <div id="timer-hours-tens"></div>
+                <div id="timer-hours-units"></div>
+                <div id="timer-colon" class="colon">:</div>
+                <div id="timer-minutes-tens"></div>
+                <div id="timer-minutes-units"></div>
+                <div id="timer-colon" class="colon">:</div>
+                <div id="timer-seconds-tens"></div>
+                <div id="timer-seconds-units"></div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
