@@ -1,4 +1,5 @@
-﻿function addSegments(digitId){
+﻿let chrometre=[0,0,0,0,0,0];
+function addSegments(digitId){
     let segm;
     for(let i=0;i<7;i++){
         segm=document.createElement("div");
@@ -39,6 +40,13 @@ function init(){
     addSegments("minutes-units");
     addSegments("seconds-units");
     addSegments("seconds-tens");
+
+    addSegments("timer-hours-tens");
+    addSegments("timer-hours-units");
+    addSegments("timer-minutes-tens");
+    addSegments("timer-minutes-units");
+    addSegments("timer-seconds-units");
+    addSegments("timer-seconds-tens");
 }
 
 function update_time(){
@@ -52,9 +60,44 @@ function update_time(){
     updateDigit("seconds-tens",parseInt(heure[6]));
 }
 
+
+function update_timer(){
+    chrometre[5]++;
+    if(chrometre[5]==10){
+        chrometre[5]=0;
+        chrometre[4]++;
+    }
+    if(chrometre[4]==6){
+        chrometre[4]=0;
+        chrometre[3]++;
+    }
+    if(chrometre[3]==10){
+        chrometre[3]=0;
+        chrometre[2]++;
+    }
+    if(chrometre[2]==6){
+        chrometre[2]=0;
+        chrometre[1]++;
+    }
+    if(chrometre[1]==10){
+        chrometre[1]=0;
+        chrometre[0]++;
+    }
+    updateDigit("timer-hours-tens",chrometre[0]);
+    updateDigit("timer-hours-units",chrometre[1]);
+    updateDigit("timer-minutes-tens",chrometre[2]);
+    updateDigit("timer-minutes-units",chrometre[3]);
+    updateDigit("timer-seconds-tens",chrometre[4]);
+    updateDigit("timer-seconds-units",chrometre[5]);
+
+}
+
 function main(){
     init();
-    setInterval(update_time,1);
+    update_timer();
+    update_time();
+    setInterval(update_time,100);
+    setInterval(update_timer,1000);
 }
 
 
