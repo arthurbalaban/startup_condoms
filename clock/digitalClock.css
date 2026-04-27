@@ -1,0 +1,55 @@
+.clocks-comp{
+    display: flex;
+    float: right;
+}
+.clocks-comp > p{
+    display: flex;
+}
+#clock,#timer{
+    background-color:pink;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding: 5px;
+}
+#clocks{
+    display: flex;
+}
+.segment0 { left: 2px; top: 0.5px; width: 6px; height: 0px; }
+.segment1 { left: 0px; top: 2px; width: 0px; height: 6px; }
+.segment2 { left: 9.5px; top: 2px; width: 0px; height: 6px; }
+.segment3 { left: 2px; top: 9.5px; width: 6px; height: 0px; }
+.segment4 { left: 0px; top: 11px; width: 0px; height: 6px; }
+.segment5 { left: 9.5px; top: 11px; width: 0px; height: 6px; }
+.segment6 { left: 2px; top: 18.5px; width: 6px; height: 0px; }
+
+.segment{
+    position: absolute;
+    border-radius: 1px;
+    border: 0.8px solid #fff;
+    transition: all 0.1s linear;
+}
+
+.clock > div ,.timer > div {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    height: 15px;
+}
+
+.clock > .colon, .timer > .colon {
+    font-size: 10px;
+    height: 15px;
+    width: 4px;
+    top: -1px;
+    color: #fff;
+    text-align: center;
+}
+
+.off {
+
+    transition: all 0.1s linear;
+    opacity: 0.1;
+}
