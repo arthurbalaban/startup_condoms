@@ -5,21 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who we are</title>
     <style>
+        #edit {
+            margin-top: 0.3%;
+            margin-left: 94%;
+        }
+        .total {
+            display : flex ;
+        }
         .profil {
+            margin : 6% ;
+            width : 25% ;
             border : 1px solid black ;
-            display : flex;
+            display: flex ;
+            flex-direction: column;
+        }
+        .grille {
+            display : grid ;
+            grid-area : 1/1 ;
+            object-fit: cover;
+        }
+        .images {
+            grid-area : 1/1 ;
+            width : 90% ;
+            padding : 5% ;
+        }
+        .grattage {
+            mix-blend-mode: multiply;
+            opacity : 0.7;
+        }
+        .center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="profil">
-        <img src="images/square_template.png" alt="image étudiant 1">
-        <h1>Eliott GAUTREAU</h1>
-        <p>
-            étudiant en CIR1<br>
-            ISEN Yncrea Ouest - Nantes
-            eliott.gautreau@isen-ouest.yncrea.fr
-        </p>
+    <button id="edit">Edit mode</button>
+    <div class="total">
+        <div class="profil">
+            <div class="grille">
+                <img src="images/square_template.png" alt="image étudiant 1" class="images">
+                <img src="images/black_square_template.png" class="images grattage">
+            </div>
+            <h1 class="center">Arthur BALABAN</h1>
+            <p class="center">
+                étudiant en CIR1<br>
+                ISEN Yncrea Ouest - Nantes<br>
+                arthur.balaban@isen-ouest.yncrea.fr
+            </p>
+        </div>
+        <div class="profil">
+            <img src="images/square_template.png" alt="image étudiant 1" class="images">
+            <h1 class="center">Eliott GAUTREAU</h1>
+            <p class="center">
+                étudiant en CIR1<br>
+                ISEN Yncrea Ouest - Nantes<br>
+                eliott.gautreau@isen-ouest.yncrea.fr
+            </p>
+        </div>
+        <div class="profil">
+            <img src="images/square_template.png" alt="image étudiant 1" class="images">
+            <h1 class="center">Malo GUINOISEAU</h1>
+            <p class="center">
+                étudiant en CIR1<br>
+                ISEN Yncrea Ouest - Nantes<br>
+                malo.guinoiseau@isen-ouest.yncrea.fr
+            </p>
+        </div>
     </div>
 </body>
 </html>
