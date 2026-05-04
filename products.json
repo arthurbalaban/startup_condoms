@@ -1,0 +1,38 @@
+[
+  {
+    "image": "images/square_template.png",
+    "title": "Produit Protection",
+    "description": "Protection maximale avec confort",
+    "price": "12.99"
+  },
+  {
+    "image": "images/square_template.png",
+    "title": "Confort Plus",
+    "description": "Sensation naturelle améliorée",
+    "price": "14.99"
+  },
+  {
+    "image": "images/square_template.png",
+    "title": "Protection Premium",
+    "description": "Qualité supérieure garantie",
+    "price": "16.99"
+  },
+  {
+    "image": "images/square_template.png",
+    "title": "Ultra Fin",
+    "description": "Sensation optimale",
+    "price": "13.99"
+  },
+  {
+    "image": "images/square_template.png",
+    "title": "Confort Étendu",
+    "description": "Durée prolongée",
+    "price": "15.99"
+  },
+  {
+    "image": "images/square_template.png",
+    "title": "Protection Totale",
+    "description": "Protection renforcée",
+    "price": "17.99"
+  }
+]

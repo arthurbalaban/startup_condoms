@@ -1,28 +1,21 @@
-// Charger et afficher les produits depuis le fichier CSV
-async function loadProducts() {
-    try {
-        const response = await fetch('products.csv');
-        const data = await response.text();
-        
-        // Parser le CSV
-        const lines = data.trim().split('\n');
-        const headers = lines[0].split(',');
-        
-        const products = [];
-        for (let i = 1; i < lines.length; i++) {
-            const values = lines[i].split(',');
-            products.push({
-                image: values[0].trim(),
-                title: values[1].trim(),
-                description: values[2].trim(),
-                price: values[3].trim()
-            });
+// Charger et afficher les produits depuis le fichier JSON en local
+function loadProducts() {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 0 || xhr.status === 200) {
+            try {
+                const products = JSON.parse(xhr.responseText);
+                displayProducts(products);
+            } catch (error) {
+                console.error('Erreur lors du parsing du JSON:', error);
+            }
         }
-        
-        displayProducts(products);
-    } catch (error) {
-        console.error('Erreur lors du chargement des produits:', error);
-    }
+    };
+    xhr.onerror = function() {
+        console.error('Erreur lors du chargement du fichier products.json');
+    };
+    xhr.open('GET', 'products.json', true);
+    xhr.send();
 }
 
 // Afficher les produits dans la grille
