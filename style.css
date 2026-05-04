@@ -85,13 +85,18 @@ p{
 .skill{
     margin-bottom: 16px;
     width: 100%;
-}
-.skill p{
     margin: 0 0 5px;
     font-weight: 600;
 }
+.skill div{
+    display: flex;
+}
+.skill p{      
+    margin-left: 10px;
+    font-size: 16px;
+}
 .skill-bar{
-    width: 100%;
+    width: 90%;
     height: 12px;
     background: #e0e0e0;
     border-radius: 6px;
