@@ -276,3 +276,20 @@ footer{
     padding-left: 3%;
     padding-right: 3%;
 }
+.visualizer{
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid rgb(234, 146, 31);
+    color: black;
+    background-color: white;
+}
+
+.visualizer:hover{
+    background-color: rgb(234, 146, 31);
+    color: magenta;
+}
+:modal{
+    background-color:rgb(234, 146, 31);
+    border: 2px solid magenta;
+    border-radius: 5px;
+}
