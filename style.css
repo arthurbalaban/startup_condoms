@@ -292,4 +292,7 @@ footer{
     background-color:rgb(234, 146, 31);
     border: 2px solid magenta;
     border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 1%;
 }
