@@ -278,25 +278,48 @@ footer{
 }
 .visualizer{
     margin: 10px 0;
-    padding: 5px;
+    padding: 20px;
     border: 1px solid rgb(234, 146, 31);
     color: black;
     background-color: white;
     font-size: 200%;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 900;
 }
-
+.visutitle{
+    font-size: 400%;
+}
 .visualizer:hover{
-    background-color: rgb(234, 146, 31);
+    background-color: #ffd8ea;
     color: magenta;
 }
 :modal{
-    background-color:rgb(234, 146, 31);
-    border: 2px solid magenta;
+    background-color:#ffd8ea;
+    border: 2px solid rgb(234, 146, 31);
     border-radius: 5px;
     position: fixed;
-    top: 50%;
+    padding: 1%;
+    top: 15%;
     left: 1%;
+}
+:modal h1{
+    padding-top: 0%;
+}
+:modal img{
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+:modal button{
+    display: block;
+    background-color: magenta;
+    border: 2px solid rgb(234, 146, 31);
+    font-size: 16px;
+    margin-top: 0.3%;
+    cursor: pointer;
 }
 .missions{
     list-style: none;
@@ -304,6 +327,10 @@ footer{
     gap: 1%;  
     padding-left: 4%;
     padding-right: 4%;
+}
+.missions p{
+    color: black;
+    font-size: 150%;
 }
 
 @media (max-width: 900px) {
