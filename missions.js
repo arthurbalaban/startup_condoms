@@ -4,6 +4,7 @@ function display_modal(indice){
     modales[indice].showModal();
 }
 
+
 document.getElementById("mission1").addEventListener("click", function() {
     display_modal(0);
 });

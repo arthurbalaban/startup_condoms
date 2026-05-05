@@ -282,6 +282,8 @@ footer{
     border: 1px solid rgb(234, 146, 31);
     color: black;
     background-color: white;
+    font-size: 200%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .visualizer:hover{
@@ -295,4 +297,17 @@ footer{
     position: fixed;
     top: 50%;
     left: 1%;
+}
+.missions{
+    list-style: none;
+    display: flex;
+    gap: 1%;  
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+@media (max-width: 900px) {
+    .missions{
+        flex-direction: column;
+    }
 }
