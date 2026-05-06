@@ -17,5 +17,5 @@ container.appendChild(box);
 
 
 
-// modale.showModal();
+modale.showModal();
 setTimeout(function() {modale.close();}, 2000);

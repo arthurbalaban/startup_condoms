@@ -10,6 +10,7 @@
     <script src="clock/digitalClock.js" defer></script>
     <script src="loader.js" defer></script>
     <link rel="stylesheet" type="text/css" href="loader.css">
+    <script src="game.js" defer></script>
 </head>
 <body>
     <header class="navbar">
@@ -58,12 +59,14 @@
         </div>
         <br>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Between 20 and 2000"></textarea>
+        <textarea id="message" name="message" rows="5" required placeholder="Between 20 and 2000 characters."></textarea>
 
         <br>
-        <button>Send</button>
+        <button onclick="main()">Send</button>
     </form>
+    <div id="gamezone">
 
+    </div>
     <footer class="footer" id="contact">
         <div class="footer-content">
             <h3>Contact us</h3>
