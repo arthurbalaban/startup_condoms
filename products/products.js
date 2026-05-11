@@ -37,7 +37,7 @@ function canvasApp(){
     context.font = "20px sans-serif";
     context.fillStyle = "black";
     context.textAlign = "center";
-    context.fillText("You succesfully bought this product!", centerX, centerY + 100);
+    context.fillText("Vous avez acheté ce produit avec succès !", centerX, centerY + 100);
 }
 
 // Charger et afficher les produits depuis la constante DATA

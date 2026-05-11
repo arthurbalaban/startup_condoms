@@ -3,22 +3,22 @@ function verify(){
     let email=document.getElementById("email").value;
     let message=document.getElementById("message").value;
     if(name=="" || email=="" || message==""){
-        alert("Please fill in all the fields.");
+        alert("Remplissez tous les champs.");
         return false;
     }
     if(!email.includes("@") || !email.includes(".")){
-        alert("Please enter a valid email address.");
+        alert("Veuillez entrer une adresse email valide.");
         return false;
     }
     if(message.length<20 || message.length>2000){
-        alert("Message must be between 20 and 2000 characters.");
+        alert("Le message doit contenir entre 20 et 2000 caractères.");
         return false;
     }
     return true;
 }
 function sent(){
     if(verify()){
-        alert("Form submitted successfully!");
+        alert("Formulaire envoyé avec succès!");
         window.location.href="contact-us.html";
     }
 }
@@ -28,7 +28,7 @@ function setup(){
     }
     let gamezone=document.getElementById("gamezone");
     gamezone.setAttribute("class","displayed");
-    gamezone.appendChild(document.createElement("div")).innerHTML="<p>Find the</p><button onclick=\"sent()\">button</button><p>in order to submit the form.</p>";
+    gamezone.appendChild(document.createElement("div")).innerHTML="<p>Trouvez le</p><button onclick=\"sent()\">bouton</button><p>pour envoyer le formulaire.</p>";
     gamezone.appendChild(document.createElement("div")).setAttribute("id","game");
 
     
