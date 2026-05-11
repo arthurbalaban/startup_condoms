@@ -6,15 +6,35 @@
     <title>Who we are</title>
     <style>
         #edit {
-            margin-top: 0.3%;
-            margin-left: 94%;
+            margin-top: 6%;
+            margin-left: 91%;
+            border: 0;
+            line-height: 2.5;
+            padding: 0 20px;
+            font-size: 1rem;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            border-radius: 10px;
+            background-color: tomato;
+        }
+        #edit:active {
+            box-shadow:
+                inset -2px -2px 3px rgb(255 255 255 / 0.6),
+                inset 2px 2px 3px rgb(0 0 0 / 0.6);
+        }
+        .imgBanner{
+            padding-top: 5%;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
         }
         .total {
-            margin-top: 10%;
             display : flex ;
         }
         .profil {
-            margin : 6% ;
+            margin-top : 6% ;
+            margin-left : 6% ;
             width : 25% ;
             border : 1px solid black ;
             display: flex ;
@@ -23,13 +43,12 @@
         .container {
             position: relative;
             padding: 5%;
-            width: 90%;
-            height: 60%;
+            width: 95%;
         }
         .container img {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            margin-left: 19%;
+            height: 700%;
             object-fit: cover;
         }
         .image_top {
@@ -39,17 +58,20 @@
         .center {
             text-align: center;
         }
+        .noms {
+            margin-top: 70%;
+        }
     </style>
 </head>
 <body>
-
+    <button id="edit" type="button" commandfor="show-modal">Mode édition</button>
     <div class="total">
         <div class="profil">
             <div class="container">
                 <img src="images/arthur.jpg" alt="image étudiant 1" class="image-bottom">
-                <img src="images/black_square_template.png" class="image-top" id="top">
+                <img src="images/malo.jpg" class="image-top">
             </div>
-            <h1 class="center">Arthur BALABAN</h1>
+            <h2 class="center noms">Arthur BALABAN</h1>
             <p class="center">
                 étudiant en CIR1<br>
                 ISEN Yncrea Ouest - Nantes<br>
@@ -57,8 +79,11 @@
             </p>
         </div>
         <div class="profil">
-            <img src="images/square_template.png" alt="image étudiant 1" class="images">
-            <h1 class="center">Eliott GAUTREAU</h1>
+            <div class="container">
+                <img src="images/eliott.jpg" alt="image étudiant 2" class="image-bottom">
+                <img src="images/arthur.jpg" class="image-top">
+            </div>
+            <h2 class="center noms">Eliott GAUTREAU</h1>
             <p class="center">
                 étudiant en CIR1<br>
                 ISEN Yncrea Ouest - Nantes<br>
@@ -66,8 +91,11 @@
             </p>
         </div>
         <div class="profil">
-            <img src="images/square_template.png" alt="image étudiant 1" class="images">
-            <h1 class="center">Malo GUINOISEAU</h1>
+            <div class="container">
+                <img src="images/malo.jpg" alt="image étudiant 3" class="image-bottom">
+                <img src="images/eliott.jpg" class="image-top">
+            </div>
+            <h2 class="center noms">Malo GUINOISEAU</h1>
             <p class="center">
                 étudiant en CIR1<br>
                 ISEN Yncrea Ouest - Nantes<br>
@@ -115,46 +143,40 @@
         </div>
     </header>
     <script>
-        const container = document.querySelector('.container');
-        const topImg = document.getElementById('top'); // ← renommé
+    const radius = 30;
 
-        container.addEventListener('mousemove', (e) => {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top; // ← ici "top" est ok, c'est une propriété d'objet
-            const radius = 30;
+    document.querySelectorAll('.container').forEach(container => {
+        const topImg = container.querySelector('.image-top');
+        const revealed = [];
 
-        topImg.style.maskImage =
-            `radial-gradient(circle ${radius}px at ${x}px ${y}px, transparent 100%, black 0)`;
-        topImg.style.webkitMaskImage =
-            `radial-gradient(circle ${radius}px at ${x}px ${y}px, transparent 100%, black 0)`;
-        const last = revealed[revealed.length - 1];
-        if (last) {
-            const dist = Math.hypot(x - last.x, y - last.y);
+        function updateMask() {
+        if (revealed.length === 0) return;
+        const gradients = revealed.map(p =>
+            `radial-gradient(circle ${radius}px at ${p.x-39}px ${p.y-5}px, transparent 100%, black 0)`
+        );
+        topImg.style.maskImage = gradients.join(', ');
+        topImg.style.webkitMaskImage = gradients.join(', ');
+        topImg.style.maskComposite = 'intersect';
         }
 
+        container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left-39;
+        const y = e.clientY - rect.top-5;
         revealed.push({ x, y });
         updateMask();
         });
 
-        container.addEventListener('mouseleave', () => {
-        topImg.style.maskImage = '';
-        topImg.style.webkitMaskImage = '';
-        });
-
-        const revealed = []; // stocke tous les points { x, y }
-
-        function updateMask() {
-            // On génère un gradient par point révélé
-            const gradients = revealed.map(p =>
-                `radial-gradient(circle ${30}px at ${p.x}px ${p.y}px, transparent 100%, black 0)`
-            );
-
-            // "mask-composite" permet de combiner plusieurs masques
-            topImg.style.maskImage = gradients.join(', ');
-            topImg.style.webkitMaskImage = gradients.join(', ');
-            topImg.style.maskComposite = 'intersect'; // ← clé pour cumuler les trous
-        }
+        // Support tactile (mobile)
+        container.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const rect = container.getBoundingClientRect();
+        const x = e.touches[0].clientX - rect.left;
+        const y = e.touches[0].clientY - rect.top;
+        revealed.push({ x, y });
+        updateMask();
+        }, { passive: false });
+    });
     </script>
 
 
