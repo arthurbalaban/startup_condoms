@@ -1,8 +1,19 @@
 function print(text){
     console.log(text);
 }
+function verify(){
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let message=document.getElementById("message").value;
+}
 function sent(){
-    alert("Bravo, vous avez trouvé le bouton !");
+    if(verify()){
+        alert("Form submitted successfully!");
+        window.location.href="contact-us.html";
+    }
+    else{
+        alert("Please fill in all the fields before submitting the form.");
+    }
 }
 function setup(){
     if(document.getElementById("gamezone").getAttribute("class")=="displayed"){
@@ -17,7 +28,5 @@ function setup(){
 }
 
 function main(){
-    setup();
-    let answer=Math.floor(Math.random()*100)+1;
-    
+    setup();    
 }
