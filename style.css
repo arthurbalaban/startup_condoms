@@ -221,9 +221,6 @@ iframe{
         box-shadow: none;
     }
     
-    #imgBanner{
-        padding-top: 15%;
-    }
 }
 
 .logo{
@@ -246,14 +243,6 @@ nav a{
 nav a:hover{
     opacity: 0.6;
 }
-
-#imgBanner{
-    padding-top: 5%;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-
 
 
 .back-to-top{
@@ -440,7 +429,7 @@ footer{
     font-weight: 900;
 }
 
-.contact-form button{
+button.contact-form-button {
     width: 10%;
     background-color: magenta;
     border-radius: 10px;
