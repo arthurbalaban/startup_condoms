@@ -32,85 +32,6 @@ p{
     color:#555555;
 }
 
-/**Specific text rules, by id**/
-#desc{
-    margin-left: 3%;
-    margin-right: 3%;
-    list-style: none;
-    display: flex;
-    gap: 2%;  
-    padding-left: 3%;
-    padding-right: 3%;
-}
-.desc p{
-    flex: 1;                
-    border: 1px solid #ccc; 
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 3px 3px 10px #bbb;
-}
-
-iframe{
-    flex: 1;                
-    border: 1px solid #ccc; 
-    /**padding: 15px;**/
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 3px 3px 10px #bbb;
-}
-
-
-.cv h3{
-    text-align: center;
-    padding-bottom: 10px;
-}
-.cv p{
-    text-align:justify;
-}
-#cv-list{
-    list-style: none;
-    display: flex;
-    gap: 1%;  
-    padding-left: 3%;
-    padding-right: 3%;
-}
-#cv-list li{
-    flex: 1;                
-    border: 1px solid #ccc; 
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 3px 3px 10px #bbb;
-}
-.skill{
-    margin-bottom: 16px;
-    width: 100%;
-    margin: 0 0 5px;
-    font-weight: 600;
-}
-.skill div{
-    display: flex;
-}
-.skill p{      
-    margin-left: 10px;
-    font-size: 16px;
-}
-.skill-bar{
-    width: 90%;
-    height: 12px;
-    background: #e0e0e0;
-    border-radius: 6px;
-    overflow: hidden;
-}
-.skill-fill{
-    height: 100%;
-    width: var(--value);
-    background: linear-gradient(90deg,/* #000000,#AAAAAA*/#4e73df, #1cc88a);
-    border-radius: 6px;
-    transition: width 1.2s ease-out;
-}
-
 /**navbar**/
 .navbar{
     position: fixed;
@@ -227,7 +148,7 @@ iframe{
     font-size: 18px;
     font-weight: 500;
 }
-.nav-links{
+.navlinks{
     display: flex;
     gap: 20px;
 }
