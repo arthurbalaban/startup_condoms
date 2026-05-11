@@ -365,6 +365,158 @@ footer{
     padding-left: 3%;
     padding-right: 3%;
 }
+.visualizer{
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid rgb(234, 146, 31);
+    color: black;
+    background-color: white;
+    font-size: 200%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 900;
+}
+.visutitle{
+    font-size: 400%;
+}
+.visualizer:hover{
+    background-color: #ffd8ea;
+    color: magenta;
+}
+:modal{
+    background-color:#ffd8ea;
+    border: 2px solid rgb(234, 146, 31);
+    border-radius: 5px;
+    position: fixed;
+    padding: 1%;
+    top: 15%;
+    left: 1%;
+}
+:modal h1{
+    padding-top: 0%;
+}
+:modal img{
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+:modal button{
+    display: block;
+    background-color: magenta;
+    border: 2px solid rgb(234, 146, 31);
+    font-size: 16px;
+    margin-top: 0.3%;
+    cursor: pointer;
+}
+.missions{
+    list-style: none;
+    display: flex;
+    gap: 1%;  
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.missions p{
+    color: black;
+    font-size: 150%;
+}
+
+@media (max-width: 900px) {
+    .missions{
+        flex-direction: column;
+    }
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgb(234, 146, 31);
+    color: black;
+    background-color: #fff0f0;
+    font-size: 150%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 900;
+}
+
+.contact-form button{
+    width: 10%;
+    background-color: magenta;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 0px;
+    box-shadow: black 3px 3px 10px;
+}
+.contact-form button:hover{
+    background-color: white;
+    opacity: 0.7;
+    box-shadow: #aa00aa 3px 3px 10px;
+    color: magenta;
+    border: 0px;
+}
+
+.contact-form textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.contact-form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+div#gamezone.displayed{
+    width: 99%;
+    
+    margin: 0.5%;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: white;
+
+}
+div#gamezone.displayed p{
+    font-size: 150%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 900;
+    text-align: center;
+    border: black 0px solid;
+    text-shadow: #ff77ff 2px 2px 4px;
+    color: black;
+    margin-bottom: -8px;
+}
+div#gamezone.displayed div#game{
+    height: 200px;
+    margin: 0;
+    border-bottom: 0px;
+}
+div#gamezone.displayed div{
+    width: 100%;
+    height: 50px;
+    border: black 3px solid;
+    display: inline-flex;
+    justify-content: center;
+}
+div#gamezone.displayed button{
+    font-size: 150%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 900;
+    text-align: center;
+    border: black 0px solid;
+    text-shadow: #ff77ff 2px 2px 4px;
+    background-color: white;
+    margin-left: 9px;
+    margin-right: 9px;
+    padding: 0;
+    height: 30%;
+    cursor: text;
+}
 
 /**Products Page**/
 .products-container {
