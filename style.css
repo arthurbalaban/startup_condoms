@@ -515,15 +515,177 @@ div#gamezone.displayed button{
     background-color: #c2185b;
 }
 
+/* Canvas Modal */
+.canvas-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.canvas-modal canvas {
+    border: 2px solid #333;
+    background-color: cyan;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Modal */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Filter Form */
+.filter-form {
+    background-color: white;
+    border: 2px solid rgb(234, 146, 31);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.filter-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95em;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group input:focus {
+    outline: none;
+    border-color: #e91e63;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.reset-btn:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.no-products {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.1em;
+    color: #666;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #filter-form {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-buttons {
+        width: 100%;
+    }
+    
+    .filter-btn, .reset-btn {
+        flex: 1;
     }
 }
 
 @media (max-width: 600px) {
     .products-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .filter-form {
+        padding: 15px;
+    }
+    
+    #filter-form {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-buttons {
+        width: 100%;;
+        flex-direction: column;
+    }
+    
+    .filter-btn, .reset-btn {
+        width: 100%;
     }
 }
