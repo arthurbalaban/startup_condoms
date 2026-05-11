@@ -4,3 +4,19 @@ div.desc_vid{
     align-items: center;
     gap: 20px;
     margin-top: 20px;}
+
+#imgBanner{
+    padding-top: 5%;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+@media (max-width: 768px) {
+    #imgBanner{
+        padding-top: 15%;
+    }
+    iframe{
+        width: 280px;
+        height: auto;
+    }
+}
