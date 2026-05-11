@@ -440,7 +440,7 @@ footer{
     font-weight: 900;
 }
 
-.contact-form button{
+button.contact-form-button {
     width: 10%;
     background-color: magenta;
     border-radius: 10px;
