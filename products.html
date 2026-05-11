@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="clock/digitalClock.css">
     <script src="clock/digitalClock.js" defer></script>
 </head>
-<body>
+<body id="top">
     <header class="navbar">
         <div class="headerlogo"><a href="home.html"><img src="images/logo.png" style="width:50px"></a></div> 
         <div class="headerlinks">
@@ -51,7 +51,7 @@
         <h1>Our Products</h1>
         <div id="products-grid" class="products-grid"></div>
     </main>
-
+    <a href="#top" class="back-to-top">↑</a>
     <footer class="footer" id="contact">
         <div class="footer-content">
             <h3>Contact us</h3>
@@ -65,7 +65,8 @@
             <p class="copyright">© 2026 - The CondomStart' team | Home page</p>
         </div>
     </footer>
-
-    <script src="products.js" defer></script>
+    
+    <script src="products/data.js" defer></script>
+    <script src="products/products.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-[
+const DATA = [
   {
     "image": "images/square_template.png",
     "title": "Produit Protection",

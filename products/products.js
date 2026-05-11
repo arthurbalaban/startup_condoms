@@ -1,21 +1,10 @@
-// Charger et afficher les produits depuis le fichier JSON en local
+// Charger et afficher les produits depuis la constante DATA
 function loadProducts() {
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 0 || xhr.status === 200) {
-            try {
-                const products = JSON.parse(xhr.responseText);
-                displayProducts(products);
-            } catch (error) {
-                console.error('Erreur lors du parsing du JSON:', error);
-            }
-        }
-    };
-    xhr.onerror = function() {
-        console.error('Erreur lors du chargement du fichier products.json');
-    };
-    xhr.open('GET', 'products.json', true);
-    xhr.send();
+    if (typeof DATA !== 'undefined') {
+        displayProducts(DATA);
+    } else {
+        console.error('La constante DATA n\'est pas disponible');
+    }
 }
 
 // Afficher les produits dans la grille
@@ -33,7 +22,7 @@ function displayProducts(products) {
             <p class="product-description">${product.description}</p>
             <div class="product-footer">
                 <span class="product-price">${product.price}€</span>
-                <button class="product-btn">Ajouter au panier</button>
+                <button class="product-btn">Acheter</button>
             </div>
         `;
         
