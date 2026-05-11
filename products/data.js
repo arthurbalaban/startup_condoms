@@ -6,7 +6,7 @@ const DATA = [
     "price": "12.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/envidken.jpg",
     "title": "Envidken",
     "description": "Pour ne pas s'imposer de limites",
     "price": "12.99"
@@ -30,7 +30,7 @@ const DATA = [
     "price": "21.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/gaule.jpg",
     "title": "Tu me donnes la gaule",
     "description": "Pour les nostalgiques de Vercingétorix, boite de 10",
     "price": "12.99"
@@ -42,7 +42,7 @@ const DATA = [
     "price": "19.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/apericul.jpg",
     "title": "Apéricul",
     "description": "C'est encore mieux partagé. 10 préservatifs.",
     "price": "9.99"
