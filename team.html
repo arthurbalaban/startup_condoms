@@ -4,67 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who we are</title>
-    <style>
-        #edit {
-            margin-top: 6%;
-            margin-left: 91%;
-            border: 0;
-            line-height: 2.5;
-            padding: 0 20px;
-            font-size: 1rem;
-            text-align: center;
-            color: white;
-            text-shadow: 1px 1px 1px black;
-            border-radius: 10px;
-            background-color: tomato;
-        }
-        #edit:active {
-            box-shadow:
-                inset -2px -2px 3px rgb(255 255 255 / 0.6),
-                inset 2px 2px 3px rgb(0 0 0 / 0.6);
-        }
-        .imgBanner{
-            padding-top: 5%;
-            width: 100%;
-            margin: 0 auto;
-            display: block;
-        }
-        .total {
-            display : flex ;
-        }
-        .profil {
-            margin-top : 6% ;
-            margin-left : 6% ;
-            width : 25% ;
-            border : 1px solid black ;
-            display: flex ;
-            flex-direction: column;
-        }
-        .container {
-            position: relative;
-            padding: 5%;
-            width: 95%;
-        }
-        .container img {
-            position: absolute;
-            margin-left: 19%;
-            height: 700%;
-            object-fit: cover;
-        }
-        .image_top {
-            -webkit-mask-image: radial-gradient(circle 80px at -999px -999px, transparent 100%, black 0);
-            mask-image: radial-gradient(circle 80px at -999px -999px, transparent 100%, black 0);
-        }
-        .center {
-            text-align: center;
-        }
-        .noms {
-            margin-top: 70%;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="images/logoTab.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="clock/digitalClock.css">
+    <link rel="stylesheet" type="text/css" href="loader.css">
+    <link rel="stylesheet" type="text/css" href="team.css">
+    <script src="clock/digitalClock.js" defer></script>
+    <!-- <script src="loader.js" defer></script> -->
+    <script src="team.js" defer></script>
 </head>
 <body>
-    <button id="edit" type="button" commandfor="show-modal">Mode édition</button>
+    <header class="navbar">
+        <div class="headerlogo"><a href="home.html"><img src="images/logo.png" style="width:50px"></a></div> 
+        <div class="headerlinks">
+            <nav class="navlinks">
+                <a href="products.html">Our products</a>
+                <a href="about.html">About us</a>
+                <a href="#">Our team</a>
+                <a href="find-us.html">Find us</a>
+                <a href="contact-us.html">Contact us</a>
+            </nav>
+        </div>
+        <div id="clocks">
+            <div id="clock" class="clock">
+                <div id="hours-tens"></div>
+                <div id="hours-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="minutes-tens"></div>
+                <div id="minutes-units"></div>
+                <div id="colon" class="colon">:</div>
+                <div id="seconds-tens"></div>
+                <div id="seconds-units"></div>
+            </div>
+            <div id="timer" class="timer">
+                <div id="timer-hours-tens"></div>
+                <div id="timer-hours-units"></div>
+                <div id="timer-colon" class="colon">:</div>
+                <div id="timer-minutes-tens"></div>
+                <div id="timer-minutes-units"></div>
+                <div id="timer-colon" class="colon">:</div>
+                <div id="timer-seconds-tens"></div>
+                <div id="timer-seconds-units"></div>
+            </div>
+        </div>
+    </header>
+    
+    <button id="edit" type="button">Mode édition</button>
+    <dialog id="editModeId">
+        <form method="dialog">
+            <p>Entrez votre identifiant d'administrateur :</p>
+            <input type="text" name="id" id="idInput" required />
+            <button id="idButton">Se connecter</button>
+        </form>
+    </dialog>
+
     <div class="total">
         <div class="profil">
             <div class="container">
@@ -103,87 +96,6 @@
             </p>
         </div>
     </div>
-    <link rel="icon" type="image/x-icon" href="images/logoTab.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="clock/digitalClock.css">
-    <script src="clock/digitalClock.js" defer></script>
-    <script src="loader.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="loader.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="headerlogo"><a href="home.html"><img src="images/logo.png" style="width:50px"></a></div> 
-        <div class="headerlinks">
-            <nav class="navlinks">
-                <a href="products.html">Our products</a>
-                <a href="about.html">About us</a>
-                <a href="#">Our team</a>
-                <a href="find-us.html">Find us</a>
-                <a href="contact-us.html">Contact us</a>
-            </nav>
-        </div>
-        <div id="clocks">
-            <div id="clock" class="clock">
-                <div id="hours-tens"></div>
-                <div id="hours-units"></div>
-                <div id="colon" class="colon">:</div>
-                <div id="minutes-tens"></div>
-                <div id="minutes-units"></div>
-                <div id="colon" class="colon">:</div>
-                <div id="seconds-tens"></div>
-                <div id="seconds-units"></div>
-            </div>
-            <div id="timer" class="timer">
-                <div id="timer-hours-tens"></div>
-                <div id="timer-hours-units"></div>
-                <div id="timer-colon" class="colon">:</div>
-                <div id="timer-minutes-tens"></div>
-                <div id="timer-minutes-units"></div>
-                <div id="timer-colon" class="colon">:</div>
-                <div id="timer-seconds-tens"></div>
-                <div id="timer-seconds-units"></div>
-            </div>
-        </div>
-    </header>
-    <script>
-    const radius = 30;
-
-    document.querySelectorAll('.container').forEach(container => {
-        const topImg = container.querySelector('.image-top');
-        const revealed = [];
-
-        function updateMask() {
-        if (revealed.length === 0) return;
-        const gradients = revealed.map(p =>
-            `radial-gradient(circle ${radius}px at ${p.x-39}px ${p.y-5}px, transparent 100%, black 0)`
-        );
-        topImg.style.maskImage = gradients.join(', ');
-        topImg.style.webkitMaskImage = gradients.join(', ');
-        topImg.style.maskComposite = 'intersect';
-        }
-
-        container.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        const x = e.clientX - rect.left-39;
-        const y = e.clientY - rect.top-5;
-        revealed.push({ x, y });
-        updateMask();
-        });
-
-        // Support tactile (mobile)
-        container.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        const rect = container.getBoundingClientRect();
-        const x = e.touches[0].clientX - rect.left;
-        const y = e.touches[0].clientY - rect.top;
-        revealed.push({ x, y });
-        updateMask();
-        }, { passive: false });
-    });
-    </script>
-
-
-
 
         <footer class="footer" id="contact">
         <div class="footer-content">
