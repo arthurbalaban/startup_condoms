@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const animateSlogan = () => {
-        // phase 1: Afficher les mots un par un
+        // phase 1: afficher les mots un par un
         let currentIndex = 0;
         sloganElement.textContent = '';
 
