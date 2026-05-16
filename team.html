@@ -49,7 +49,9 @@
         </div>
     </header>
     
+
     <button id="edit" type="button">Mode édition</button>
+    <button id="addMember" type="button" hidden>Ajouter un membre</button>
     <dialog id="editModeId">
         <form method="dialog">
             <p>Entrez votre identifiant d'administrateur :</p>
@@ -58,7 +60,34 @@
         </form>
     </dialog>
 
-    <div class="total">
+    <dialog id="editModeMp">
+        <form method="dialog">
+            <p>Entrez votre mot de passe :</p>
+            <input type="text" name="mp" id="mpInput" required />
+            <button id="mpButton">Valider</button>
+        </form>
+    </dialog>
+
+    <dialog id="alertEdit">
+        <form method="dialog">
+            <p>Êtes-vous sûr de vouloir quitter le mode édition :</p>
+            <div id="alertChoice">
+                <button id="quitEdit">Oui</button>
+                <button>Non</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="newMember">
+        <form method="dialog">
+            <p>Entrez le nom du nouveau membre :</p>
+            <input type="text" name="name" id="nameMember" required />
+            <button id="memberButton">Valider</button>
+        </form>
+    </dialog>
+
+    <div id="total">
+        <div>
         <div class="profil">
             <div class="container">
                 <img src="images/arthur.jpg" alt="image étudiant 1" class="image-bottom">
@@ -71,6 +100,8 @@
                 arthur.balaban@isen-ouest.yncrea.fr
             </p>
         </div>
+        </div>
+        <div>
         <div class="profil">
             <div class="container">
                 <img src="images/eliott.jpg" alt="image étudiant 2" class="image-bottom">
@@ -83,6 +114,8 @@
                 eliott.gautreau@isen-ouest.yncrea.fr
             </p>
         </div>
+        </div>
+        <div>
         <div class="profil">
             <div class="container">
                 <img src="images/malo.jpg" alt="image étudiant 3" class="image-bottom">
@@ -95,6 +128,7 @@
                 malo.guinoiseau@isen-ouest.yncrea.fr
             </p>
         </div>
+    </div>
     </div>
 
         <footer class="footer" id="contact">
