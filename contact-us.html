@@ -58,11 +58,16 @@
 
         <input type="email" id="email" name="email" required placeholder="Email">
         </div>
+        <div class="error-signal" id="nameEmail">
+            <p></p>
+            <p></p>
+        </div>
         <br>
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required placeholder="Entre 20 et 2000 caractères."></textarea>
-
-        <br>
+        <div class="error-signal" id="message">
+            <p></p>
+        </div>
     </form>
     <button onclick="game()" class="contact-form-button">Valider</button>
     <div id="gamezone">
