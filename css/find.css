@@ -1,0 +1,47 @@
+#weather{
+    display: flex;
+    flex-direction: list;
+    align-items: center;
+}
+.city{
+    margin: 20px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    padding: 1%;
+    margin-right: 30px;
+    padding-right: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.city:hover{
+    box-shadow: magenta 20px 20px 10px;
+    transform: translateY(-10px);
+}
+.city h3{
+    margin: 5%;
+    margin-right: 15%;
+    font-size: 300%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#météo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+iframe{
+    border: none;
+    width: 95%;
+    margin-left: 2.5%;
+}

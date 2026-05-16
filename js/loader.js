@@ -21,5 +21,5 @@ container.appendChild(box);
 
 
 // affiche la modale pendant 2s
-modale.showModal();
+// modale.showModal();
 setTimeout(function() {modale.close();}, 2000);
