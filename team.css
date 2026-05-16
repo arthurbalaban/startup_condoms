@@ -1,0 +1,131 @@
+dialog {
+    margin : auto;
+    width: 30%;
+    height: 17%;
+}
+input{
+  width: 256px;
+  margin-left: calc(50% - 128px);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#edit {
+    margin-top: 95px;
+    margin-left: 90%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 10px;
+    background-color: tomato;
+}
+#edit:active {
+    box-shadow:
+        inset -2px -2px 3px rgb(255 255 255 / 0.6),
+        inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+#addMember {
+    margin-left: 2%;
+    padding: 5px 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    background-color: pink;
+}
+#addMember:active {
+    box-shadow:
+        inset -2px -2px 3px rgb(255 255 255 / 0.6),
+        inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+#alertChoice {
+    margin-top : 5%;
+    display : flex;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#quitEdit {
+    margin-right: 65%;
+}
+#total {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display : grid ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15%;
+    grid-auto-rows: minmax(110px, auto);
+}
+.changeButton {
+    margin-bottom: 25%;
+    padding: 3px 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    background-color: green;
+}
+.delete {
+    margin-bottom: 25%;
+    padding: 3px 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(208, 1, 1);
+}
+.imgBanner{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.profil {
+    padding-right: 5%;
+    border : 1px solid black ;
+    display: grid ;
+    grid-template-rows: 1.5% 2fr;
+}
+.container {
+    position: relative;
+    padding: 5%;
+    width: 95%;
+}
+.container img {
+    position: absolute;
+    margin-left: 19%;
+    height: 700%;
+    object-fit: cover;
+
+}
+.image_top {
+    -webkit-mask-image: radial-gradient(circle 80px at -999px -999px, transparent 100%, black 0);
+    mask-image: radial-gradient(circle 80px at -999px -999px, transparent 100%, black 0);
+}
+.center {
+    text-align: center;
+}
+.noms {
+    margin-top: 70%;
+}
+
+
+@media (max-width: 1024px) {
+    #total {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profil {
+        grid-template-rows: 1.5% 2fr 0.9fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #total {
+        grid-template-columns: 1fr;
+    }
+    .profil {
+        grid-template-rows: 1.5% 2fr 1.2fr;
+    }
+}
