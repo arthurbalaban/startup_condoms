@@ -86,6 +86,14 @@
         </form>
     </dialog>
 
+    <dialog id="newName">
+        <form method="dialog">
+            <p>Entrez le nouveau nom :</p>
+            <input type="text" name="name" id="newNameInput" required />
+            <button id="newNameButton">Valider</button>
+        </form>
+    </dialog>
+
     <div id="total">
         <div>
         <div class="profil">
@@ -100,6 +108,7 @@
                 arthur.balaban@isen-ouest.yncrea.fr
             </p>
         </div>
+            <button id="change1" class="changeButton" onclick="change(0)" type="button" hidden>Changer le nom</button>
         </div>
         <div>
         <div class="profil">
@@ -114,6 +123,7 @@
                 eliott.gautreau@isen-ouest.yncrea.fr
             </p>
         </div>
+            <button id="change2" class="changeButton" onclick="change(1)" type="button" hidden>Changer le nom</button>
         </div>
         <div>
         <div class="profil">
@@ -128,6 +138,7 @@
                 malo.guinoiseau@isen-ouest.yncrea.fr
             </p>
         </div>
+            <button id="change3" class="changeButton" onclick="change(2)" type="button" hidden>Changer le nom</button>
     </div>
     </div>
 
