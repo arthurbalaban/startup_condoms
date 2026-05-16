@@ -1,4 +1,5 @@
 // fonction de vérification du formulaire
+
 function verify(){
     // Récupération des champs du formulaire
     let name=document.getElementById("name").value;
@@ -35,6 +36,7 @@ function sent(){
 function setup(){
     // pour ne pas recréer le jeu
     if(document.getElementById("gamezone").getAttribute("class")=="displayed"){
+        console.log("Le jeu est déjà affiché.");
         return;
     }
     // crée les différents éléments du jeu
@@ -44,6 +46,6 @@ function setup(){
     gamezone.appendChild(document.createElement("div")).setAttribute("id","game");
 }
 
-function main(){
-    setup();    
+function game(){
+    setup();
 }

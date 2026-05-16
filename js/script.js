@@ -41,18 +41,16 @@ function changecolor(){
     for(let i=0; i<navbar_elts.length; i++){
         if(navbar_elts[i].innerText==page){
             let elt=navbar_elts[i];
-            console.log(elt);
+
+            //affichage
+            elt.style.color=colors[colorindex];
+            console.log("La couleur du menu a été changée en "+colorname[colorindex]);
             break;
         }
     }
-    // elt=elt[0];
 
-    //affichage
-    console.log(elt);
-    // elt.setAttribute("style", "color: " + colors[colorindex]+ ";");
-    elt.style.color=colors[colorindex];
-    console.log(elt);
-    console.log("La couleur du menu a été changée en "+colorname[colorindex]);
+
+    
 }
 
 
