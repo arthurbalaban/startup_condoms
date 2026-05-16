@@ -54,9 +54,22 @@ function changecolor(){
 }
 
 
+function teamLinkConfirmation(){
+    const teamLink = document.getElementById('team');
+    if(teamLink){
+        teamLink.addEventListener('click', function(event){
+            event.preventDefault();
+            if(confirm('Êtes-vous sûr de vouloir naviguer vers la PRÉSENTATION DE L\'ÉQUIPE ?')){
+                window.location.href = 'team.html';
+            }
+        });
+    }
+}
+
 function main(){
     document.body.addEventListener("copy", copier);
     hamburgerMenu();
     changecolor();
+    teamLinkConfirmation();
 }
 main();

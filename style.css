@@ -82,6 +82,15 @@ p{
     align-items: center;
 }
 
+#clocks{
+    display: flex;
+    gap: 15px;
+}
+
+.clocks-mobile{
+    display: none;
+}
+
 .navlinks a{
     text-decoration: none;
     color: black;
@@ -112,12 +121,12 @@ p{
         flex-direction: column;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.5s ease;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
     
     .headerlinks.active{
-        max-height: 300px;
+        max-height: 500px;
     }
     
     .navlinks{
@@ -140,6 +149,20 @@ p{
     .navlinks a:hover{
         background-color: #f0f0f0;
         box-shadow: none;
+    }
+    
+    #clocks{
+        display: none;
+    }
+    
+    .clocks-mobile{
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        justify-content: center;
+        align-items: center;
     }
     
 }
