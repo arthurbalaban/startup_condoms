@@ -1,6 +1,6 @@
 const DATA = [
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/starwars.png",
     "title": "Je ne suis pas ton père",
     "description": "Notre best-seller, pour que la force soit avec vous. 10 préservatifs.",
     "price": "12.99"
@@ -12,19 +12,19 @@ const DATA = [
     "price": "12.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/belleetbite.png",
     "title": "La belle et la bite",
     "description": "Comme un conte de fées, boite de 10",
     "price": "11.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/durcy.png",
     "title": "T'habites à Durcy ?",
     "description": "Pour un confort même à domicile, boite de 10",
     "price": "11.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/harrypotter.png",
     "title": "Harry pelotter et la braguette magique + Try potter",
     "description": "Pour une soirée magique, combo de 10 de chaque",
     "price": "21.99"
@@ -36,7 +36,7 @@ const DATA = [
     "price": "12.99"
   },
   {
-    "image": "images/square_template.png",
+    "image": "images/images_capotes/mchapote.png",
     "title": "Mc hapote + Mc & Ket",
     "description": "Toute taille disponible, même happy meal. Boite de 10 de chaque.",
     "price": "19.99"
