@@ -97,3 +97,37 @@ iframe{
     border-radius: 6px;
     transition: width 1.2s ease-out;
 }
+
+/* Animation du slogan */
+#slogan_anim {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    transition: transform 1s ease-in-out;
+}
+
+#slogan_anim.move-right {
+    animation: slideRight 1s ease-in-out forwards;
+}
+
+#slogan_anim.move-left {
+    animation: slideLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
