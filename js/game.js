@@ -6,21 +6,29 @@ function verify(){
     let email=document.getElementById("email").value;
     let message=document.getElementById("message").value;
 
+    let nameError=document.getElementsByClassName("error-signal")[0].children[0]
+    let emailError=document.getElementsByClassName("error-signal")[0].children[1];
+    let messageError=document.getElementsByClassName("error-signal")[1].firstElementChild;
+
     // Vérification des champs vides
-    if(name=="" || email=="" || message==""){
-        alert("Remplissez tous les champs.");
-        return false;
+    let error=0;
+    if(name==""){
+        nameError.innerText="Veuillez entrer votre nom.";
+        error++;
     }
 
     // Vérification de l'email
     if(!email.includes("@") || !email.includes(".")){
-        alert("Veuillez entrer une adresse email valide.");
-        return false;
+        emailError.innerText="Veuillez entrer une adresse email valide.";
+        error++;
     }
 
     // Vérification de la longueur du message
     if(message.length<20 || message.length>2000){
-        alert("Le message doit contenir entre 20 et 2000 caractères.");
+        messageError.innerText="Le message doit contenir entre 20 et 2000 caractères.";
+        error++;
+    }
+    if(error>0){
         return false;
     }
     return true;
@@ -47,5 +55,7 @@ function setup(){
 }
 
 function game(){
-    setup();
+    if(verify()){//si le formulaire est valide, on affiche le jeu
+        setup();
+    }
 }
